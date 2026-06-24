@@ -98,3 +98,12 @@ initially, the value is init=0.
 The final answer is 10.
  */
 
+var reduce = function(nums, fn, init) {
+    let ans = init;
+    for(let num of nums){
+       ans = fn(ans, num);
+       console.log(ans)
+    }
+    return ans;
+};
+
