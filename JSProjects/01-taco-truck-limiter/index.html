@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taco-Truck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="truck-container">
+        <h1>🌮 Async Taco Truck Dashboard 🌮</h1>
+        <p>Enforcing closures and promises with delicious state management.</p>
+
+        <button id="order-btn">🔔 Order Next Taco!</button>
+
+        <div class="dashboard">
+            <div class="panel">
+                <h3>🔥 Stove Burners (Max 2)</h3>
+                <div id="burners-container" class="slots-grid"></div>
+            </div>
+
+            <div class="panel">
+                <h3>📋 Ticket Queue (Closure Memory)</h3>
+                <div id="queue-container" class="slots-grid"></div>
+            </div>
+        </div>
+
+        <div class="panel logs-panel">
+            <h3>📜 Kitchen Logs</h3>
+            <div id="log-box"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
