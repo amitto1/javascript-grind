@@ -22,8 +22,8 @@ function createTacoTruck(maxBurners) {
         }
 
         for (let i = 0; i < activeCooks; i++) {
-        burnerContainer.innerHTML += `<div class="taco-card cooking">🔥 Cooking Taco...</div>`;
-    }
+            burnerContainer.innerHTML += `<div class="taco-card cooking">🔥 Cooking Taco...</div>`;
+        }
     }
 
     function processQueue() {
@@ -38,14 +38,14 @@ function createTacoTruck(maxBurners) {
         const { id, tacoCookingFn, resolve, reject } = nextOrder;
         activeCooks++;
         tacoCookingFn()
-        .then(()=>{
-               logToScreen("Its Ready!");
-               resolve();
-        })
-        .finally(()=>{
-               activeCooks--;
-               processQueue();
-        })
+            .then(() => {
+                logToScreen("Its Ready!");
+                resolve();
+            })
+            .finally(() => {
+                activeCooks--;
+                processQueue();
+            })
 
     }
 
@@ -70,7 +70,7 @@ const cookTacoAction = () => {
 // 3. Listen for clicks on our orange button!
 orderBtn.addEventListener('click', () => {
     tacoCount++; // Count the new order
-    
+
     // Fire the order into our closure engine!
     orderFromTruck(tacoCount, cookTacoAction);
 });
